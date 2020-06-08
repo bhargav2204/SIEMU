@@ -29,13 +29,13 @@ export default function Routes() {
   return (
     <Router history={history}>
       <Switch>
-        <Redirect from="/" exact to="/signin" />
+        <Redirect from="/" exact to="/siemu" />
         {/* <Route path="/signin" component={SignIn} /> */}
         <Route path="/siemu/productlist" component={Productlist} />
         <Route path="/siemu" component={Siemu} />
         <Route path="/aboutus" component={AboutUs} />
         <Route path="/contactus" component={ContactUs} />
-       
+
         {/* <Route path="/usermanagment" component={Usermanagment} />
         <Route path="/settings" component={Settings} /> */}
       </Switch>
