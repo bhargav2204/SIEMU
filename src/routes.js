@@ -22,6 +22,7 @@ import Siemu from "./sections/Siemu/index";
 import AboutUs from "./sections/Aboutus/About";
 import ContactUs from "./sections/Contactus/ContactUs";
 import Productlist from "./sections/Siemu/Pages/Productlist";
+import Demo from "./sections/Demo";
 // import Ordermanagment from "./sections/OrderManagment/index";
 // import Settings from "./sections/Settings/index";
 // import Usermanagment from "./sections/UserManament/index";
@@ -35,7 +36,7 @@ export default function Routes() {
         <Route path="/siemu" component={Siemu} />
         <Route path="/aboutus" component={AboutUs} />
         <Route path="/contactus" component={ContactUs} />
-
+        <Route path="/demo" component={Demo} />
         {/* <Route path="/usermanagment" component={Usermanagment} />
         <Route path="/settings" component={Settings} /> */}
       </Switch>
