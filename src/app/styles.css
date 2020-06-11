@@ -119,7 +119,12 @@ button:focus {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+.tp-image {
+  background-image: url("../Asset/maintain.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .headings {
   text-align: center;
   font-size: 25px !important;

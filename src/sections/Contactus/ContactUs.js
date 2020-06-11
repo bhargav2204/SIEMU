@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-
+import "../../app/styles.css";
 export default class ContactUs extends Component {
   render() {
-    return <div>contact</div>;
+    return <div className="tp-image" style={{ height: 556 }} />;
   }
 }

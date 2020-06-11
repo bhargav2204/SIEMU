@@ -23,7 +23,7 @@ import AboutUs from "./sections/Aboutus/About";
 import ContactUs from "./sections/Contactus/ContactUs";
 import Productlist from "./sections/Siemu/Pages/Productlist";
 import Demo from "./sections/Demo";
-// import Ordermanagment from "./sections/OrderManagment/index";
+import ProductDetails from "./sections/Siemu/Pages/ProductDetails";
 // import Settings from "./sections/Settings/index";
 // import Usermanagment from "./sections/UserManament/index";
 export default function Routes() {
@@ -32,11 +32,14 @@ export default function Routes() {
       <Switch>
         <Redirect from="/" exact to="/siemu" />
         {/* <Route path="/signin" component={SignIn} /> */}
+        <Route path="/siemu/productDetails" component={ProductDetails} />
         <Route path="/siemu/productlist" component={Productlist} />
+
         <Route path="/siemu" component={Siemu} />
         <Route path="/aboutus" component={AboutUs} />
         <Route path="/contactus" component={ContactUs} />
         <Route path="/demo" component={Demo} />
+
         {/* <Route path="/usermanagment" component={Usermanagment} />
         <Route path="/settings" component={Settings} /> */}
       </Switch>

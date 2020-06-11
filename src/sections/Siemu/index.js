@@ -60,7 +60,7 @@ export default function index() {
               <Link to="/siemu/productlist">
                 <Card>
                   <img
-                    src="../../assets/images/product3.jpg"
+                    src="../../assets/images/petro.jpg"
                     className=""
                     style={{
                       width: "-webkit-fill-available",
@@ -131,7 +131,7 @@ export default function index() {
               <Link to="/siemu/productlist">
                 <Card>
                   <img
-                    src="../../assets/images/product6.jpg"
+                    src="../../assets/images/hyg.jpg"
                     className=""
                     style={{
                       width: "-webkit-fill-available",
@@ -154,7 +154,7 @@ export default function index() {
               <Link to="/siemu/productlist">
                 <Card>
                   <img
-                    src="../../assets/images/product7.jpg"
+                    src="../../assets/images/good.jpg"
                     className=""
                     style={{
                       width: "-webkit-fill-available",
@@ -177,7 +177,7 @@ export default function index() {
               <Link to="/siemu/productlist">
                 <Card>
                   <img
-                    src="../../assets/images/product8.jpg"
+                    src="../../assets/images/luxry.jpeg"
                     className=""
                     style={{
                       width: "-webkit-fill-available",

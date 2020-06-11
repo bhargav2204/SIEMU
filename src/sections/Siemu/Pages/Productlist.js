@@ -329,18 +329,38 @@ class Productlist extends React.Component {
       },
       {
         title: "Harry's Shave & Gel",
+        titleOne: "Facial care product that is used to remove make-up",
+        titleTwo:
+          "dead skin cells, oil, dirt, and other types of pollutants from the skin of the face",
+        titleThree:
+          "This helps to unclog pores and prevent skin conditions such as acne.",
         src: "../../assets/ConsumerProduct/c5.jpg",
       },
       {
         title: "Brand Premimu",
+        titleOne: "Facial care product that is used to remove make-up",
+        titleTwo:
+          "dead skin cells, oil, dirt, and other types of pollutants from the skin of the face",
+        titleThree:
+          "This helps to unclog pores and prevent skin conditions such as acne.",
         src: "../../assets/ConsumerProduct/c6.jpg",
       },
       {
         title: "Icon India Oil",
+        titleOne: "Facial care product that is used to remove make-up",
+        titleTwo:
+          "dead skin cells, oil, dirt, and other types of pollutants from the skin of the face",
+        titleThree:
+          "This helps to unclog pores and prevent skin conditions such as acne.",
         src: "../../assets/ConsumerProduct/c7.jpg",
       },
       {
         title: "Nail Polish Remover",
+        titleOne: "Facial care product that is used to remove make-up",
+        titleTwo:
+          "dead skin cells, oil, dirt, and other types of pollutants from the skin of the face",
+        titleThree:
+          "This helps to unclog pores and prevent skin conditions such as acne.",
         src: "../../assets/ConsumerProduct/c8.jpg",
       },
     ];
@@ -353,7 +373,7 @@ class Productlist extends React.Component {
     return this.content
       .slice(firstItem, lastItem)
       .map(({ title, src, titleOne, titleTwo, titleThree }) => (
-        <Link to="/siemu/productlist">
+        <Link to="/siemu/productDetails">
           <Card
             key={title}
             style={cardStyles}
