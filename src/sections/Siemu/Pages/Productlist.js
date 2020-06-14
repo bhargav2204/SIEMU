@@ -25,6 +25,7 @@ class Productlist extends React.Component {
     super(props);
     this.state = {
       activePage: 1,
+      data: [],
     };
     this.handleOnChange = this.handleOnChange.bind(this);
     this.content = [
@@ -100,52 +101,52 @@ class Productlist extends React.Component {
   }
   componentDidMount() {
     Tabletop.init({
-      key: "1mdNsDhGjoicarydkMlr3QRbvyRV7QE5Q6kl4DeT6Heo",
+      key: "14jYh5iLTCKas-oJkuwAavQ2w0-PB0xc8duvbAwl4umY",
       callback: (googleData) => {
         // dispatch(receiveProducts(googleData));
         console.log("googleData", googleData);
+        this.setState({ data: googleData });
       },
       simpleSheet: true,
     });
   }
-  getContent() {
+  getContent(filterProductByCategory) {
+    console.log("filterProductByCategory", filterProductByCategory);
     const { activePage } = this.state;
     const lastItem = activePage * 4;
     const firstItem = lastItem - 4;
-    return this.content
-      .slice(firstItem, lastItem)
-      .map(({ title, src, titleOne, titleTwo, titleThree }) => (
-        <Link to="/siemu/productDetails">
-          <Card
-            key={title}
-            style={cardStyles}
-            className="rainbow-m-bottom_x-large rainbow-m-right_small"
-            //     footer={
-            //       <StyledTitle className="rainbow-font-size-text_large">
-            //         {title}&nbsp;&nbsp;&nbsp;&nbsp;
-            //         {titleOne}
-            //       </StyledTitle>
-            //     }
+    return filterProductByCategory.slice(firstItem, lastItem).map((recoed) => (
+      <Link to={"/siemu/productDetails/" + recoed.id}>
+        <Card
+          key={recoed.productName}
+          style={cardStyles}
+          className="rainbow-m-bottom_x-large rainbow-m-right_small"
+          //     footer={
+          //       <StyledTitle className="rainbow-font-size-text_large">
+          //         {title}&nbsp;&nbsp;&nbsp;&nbsp;
+          //         {titleOne}
+          //       </StyledTitle>
+          //     }
+        >
+          <div style={getCardImageContainerStyles(recoed.productImage)} />
+          <div
+            className="text-center"
+            style={{
+              paddingTop: "5px",
+              paddingBottom: "5px",
+            }}
           >
-            <div style={getCardImageContainerStyles(src)} />
-            <div
-              className="text-center"
-              style={{
-                paddingTop: "5px",
-                paddingBottom: "5px",
-              }}
-            >
-              <h2>{title}</h2>&nbsp;
-              <h1> {titleOne}</h1>
-              &nbsp;
-              <h1>{titleTwo}</h1>
-              &nbsp;
-              <h1>{titleThree}</h1>
-              &nbsp;
-            </div>
-          </Card>
-        </Link>
-      ));
+            <h2>{recoed.productName}</h2>&nbsp;
+            <h1> {recoed.titalOne}</h1>
+            &nbsp;
+            <h1>{recoed.titalTwo}</h1>
+            &nbsp;
+            <h1>{recoed.titalThree}</h1>
+            &nbsp;
+          </div>
+        </Card>
+      </Link>
+    ));
   }
 
   handleOnChange(event, page) {
@@ -154,7 +155,17 @@ class Productlist extends React.Component {
 
   render() {
     const { activePage } = this.state;
-    console.log("activePage", activePage);
+    const categoryIdByPath = this.props.location.pathname.split("/")[3];
+    console.log("location", categoryIdByPath);
+    const filterProductByCategory = this.state.data.filter(
+      (list) => list.category === categoryIdByPath
+    );
+    console.log(
+      "filterProductByCategory------",
+      filterProductByCategory.length
+    );
+    const product = this.state.data.length;
+    console.log("activePage-------", this.state.data);
     return (
       <div className="bg-image">
         <div className="">
@@ -166,11 +177,11 @@ class Productlist extends React.Component {
             style={{ marginTop: "-38px" }}
           >
             <div className="rainbow-flex rainbow-justify_space-around rainbow-flex_wrap">
-              {this.getContent()}
+              {this.getContent(filterProductByCategory)}
             </div>
             <Pagination
               className="rainbow-m_auto"
-              pages={this.content.length / 4}
+              pages={Math.round(filterProductByCategory.length / 4)}
               activePage={activePage}
               onChange={this.handleOnChange}
             />
