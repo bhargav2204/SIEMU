@@ -131,3 +131,10 @@ button:focus {
   color: #fff;
   padding-top: 20px;
 }
+.loader {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  left: 40%;
+  top: 50%;
+}

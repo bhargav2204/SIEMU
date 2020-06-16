@@ -63,7 +63,8 @@ import {
 import history from "../history";
 import toogleSidebar, { navigate } from "../redux/actions/app";
 import "./styles.css";
-
+import icon from "../Asset/logo.jpeg";
+import Google from "../components/icons/Google";
 function resolveCurrentUrl() {
   return history.location.pathname.split("/")[1] || "dashboard";
 }
@@ -136,6 +137,13 @@ class App extends Component {
               name="Contact Us"
               label="Contact Us"
               onClick={() => navigate("/contactus")}
+            />
+            <SidebarItem
+              className="react-rainbow-admin-app_sidebar-item"
+              icon={<Google />}
+              name="Whatsapp"
+              label="Whatsapp"
+              onClick={() => navigate("/abc")}
             />
             {/* <SidebarItem
               className="react-rainbow-admin-app_sidebar-item"
