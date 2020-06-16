@@ -1,140 +1,170 @@
 .react-rainbow-admin-app_sidebar-container {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: calc(100vh - 68px);
-  margin-top: 68px;
-  background-color: #fff;
-  z-index: 99999;
-  padding-bottom: 14px;
-  padding-top: 14px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: calc(100vh - 68px);
+    margin-top: 68px;
+    background-color: #fff;
+    z-index: 99999;
+    padding-bottom: 14px;
+    padding-top: 14px;
 }
 
 .react-rainbow-admin-app_sidebar {
-  width: 88px;
-  height: 100%;
-  border-right: 1px solid #f4f6f9;
-  overflow-y: auto;
-  flex-grow: 1;
+    width: 88px;
+    height: 100%;
+    border-right: 1px solid #f4f6f9;
+    overflow-y: auto;
+    flex-grow: 1;
 }
 
 .react-rainbow-admin-app_router-container {
-  padding-top: 68px;
-  padding-left: 88px;
-  background-color: #f4f6f9;
-  min-height: 100vh;
+    padding-top: 68px;
+    padding-left: 88px;
+    background-color: #f4f6f9;
+    min-height: 100vh;
 }
 
 .react-rainbow-admin-app_sidebar-item {
-  margin-bottom: 16px;
+    margin-bottom: 16px;
 }
 
 .react-rainbow-admin-app_sidebar-back-button-container {
-  display: none;
+    display: none;
 }
 
 @media (max-width: 600px) {
-  .react-rainbow-admin-app_sidebar-container {
-    height: 100vh;
-    margin-top: 0;
-    transform: translateX(0%);
-    transition: transform 230ms linear, opacity 230ms linear;
-  }
-  .react-rainbow-admin-app_router-container {
-    padding-top: 116px;
-    padding-left: 0;
-  }
-  .react-rainbow-admin-app_sidebar-container--sidebar-hidden {
-    transform: translateX(-100%);
-    transition: transform 250ms linear, opacity 250ms linear;
-  }
-  .react-rainbow-admin-app_sidebar-back-button-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-grow: 2;
-    align-items: flex-end;
-    padding-top: 12px;
-  }
-  .react-rainbow-admin-app_sidebar-back-button-icon {
-    color: #000;
-  }
-  .react-rainbow-admin-app_backdrop {
-    display: unset;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(82, 95, 127, 0.4);
-    position: fixed;
-    z-index: 99999;
-    top: 0;
-    left: 0;
-  }
+    .react-rainbow-admin-app_sidebar-container {
+        height: 100vh;
+        margin-top: 0;
+        transform: translateX(0%);
+        transition: transform 230ms linear, opacity 230ms linear;
+    }
+    .react-rainbow-admin-app_router-container {
+        padding-top: 116px;
+        padding-left: 0;
+    }
+    .react-rainbow-admin-app_sidebar-container--sidebar-hidden {
+        transform: translateX(-100%);
+        transition: transform 250ms linear, opacity 250ms linear;
+    }
+    .react-rainbow-admin-app_sidebar-back-button-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-grow: 2;
+        align-items: flex-end;
+        padding-top: 12px;
+    }
+    .react-rainbow-admin-app_sidebar-back-button-icon {
+        color: #000;
+    }
+    .react-rainbow-admin-app_backdrop {
+        display: unset;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(82, 95, 127, 0.4);
+        position: fixed;
+        z-index: 99999;
+        top: 0;
+        left: 0;
+    }
 }
 
 h2 {
-  font-size: 1rem !important;
-  font-weight: 600 !important;
-  color: rgb(42, 48, 57);
-  line-height: 1.5;
-  margin: 0px;
-  padding: 0px;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    color: rgb(42, 48, 57);
+    line-height: 1.5;
+    margin: 0px;
+    padding: 0px;
 }
 
 p {
-  font-size: 0.75rem !important;
-  font-weight: 400 !important;
-  color: rgb(42, 48, 57);
-  margin: 0px;
-  padding: 0px;
+    font-size: 0.75rem !important;
+    font-weight: 400 !important;
+    color: rgb(42, 48, 57);
+    margin: 0px;
+    padding: 0px;
 }
 
 body {
-  font-family: "Lato", Arial, sans-serif !important;
+    font-family: "Lato", Arial, sans-serif !important;
 }
 
 a:hover {
-  text-decoration: none !important;
+    text-decoration: none !important;
 }
 
 @media (min-width: 320px) {
-  .rainbow-m-bottom_xsmall {
-    padding: 20px 0 !important;
-  }
+    .rainbow-m-bottom_xsmall {
+        padding: 20px 0 !important;
+    }
 }
 
 @media (min-width: 1000px) {
-  .rainbow-m-bottom_xsmall {
-    padding: 0px 0 !important;
-  }
+    .rainbow-m-bottom_xsmall {
+        padding: 0px 20px !important;
+    }
 }
 
 button:focus {
-  outline: none !important;
+    outline: none !important;
 }
 
 .bg-image {
-  background-image: url("../Asset/Images/b2.jpeg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-image: url("../Asset/Images/b2.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 89vh;
+    ;
 }
+
 .tp-image {
-  background-image: url("../Asset/maintain.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-image: url("../Asset/maintain.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 .headings {
-  text-align: center;
-  font-size: 25px !important;
-  color: #fff;
-  padding-top: 20px;
+    text-align: center;
+    font-size: 25px !important;
+    color: #fff;
+    padding-top: 20px;
 }
+
 .loader {
-  width: 5rem;
-  height: 5rem;
-  position: absolute;
-  left: 40%;
-  top: 50%;
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    left: 40%;
+    top: 50%;
+}
+
+h1 {
+    font-size: 22px !important;
+    font-weight: bold !important;
+}
+
+b {
+    color: #f5f5f5 !important;
+}
+
+.line {
+    width: 40px;
+    height: 2px;
+    background: #5c761f;
+    display: inline-block;
+}
+
+h2 {
+    font-size: 17px !important;
+    color: #f4f4f4 !important;
+}
+
+p {
+    font-size: 15px !important;
 }

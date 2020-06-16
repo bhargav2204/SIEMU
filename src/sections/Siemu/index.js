@@ -35,7 +35,7 @@ class Product extends Component {
         </div>
         <div className="container">
           <div className="row" style={{ padding: "30px 0px" }}>
-            <div className="col-md-3 col-xs-12">
+            
               {Category.map((res, i) => {
                 return (
                   <div className=" rainbow-m-bottom_xsmall" key={i}>
@@ -44,39 +44,36 @@ class Product extends Component {
                         className="rainbow-m_auto"
                         style={carouselContainerStyles}
                       >
+                        <div className="col-md-12 col-xs-12" >
                         <CarouselImage
                           src={res.Picture}
-                          style={{
-                            width: "-webkit-fill-available",
-                            height: " 169px",
-                          }}
+                          
                           header={res.categoryName}
                           alternativeText="First card accessible description."
                         />
+                        </div>
+                        <div className="col-md-12 col-xs-12" >
                         <CarouselImage
                           src={res.picture1}
-                          style={{
-                            width: "-webkit-fill-available",
-                            height: " 169px",
-                          }}
+                          
                           header={res.categoryName}
                           alternativeText="Second card accessible description."
                         />
+                        </div>
+                        <div className="col-md-12 col-xs-12" >
                         <CarouselImage
                           src={res.picture2}
-                          style={{
-                            width: "-webkit-fill-available",
-                            height: " 169px",
-                          }}
+                          
                           header={res.categoryName}
                           alternativeText="Third card accessible description."
                         />
+                        </div>
                       </CarouselCard>
                     </Link>
                   </div>
                 );
               })}
-            </div>
+           
           </div>
           <div className="row" style={{ padding: "0px  0px 30px 0" }} />
         </div>
