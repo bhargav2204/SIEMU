@@ -41,7 +41,7 @@ class Product extends Component {
                 <div className=" rainbow-m-bottom_xsmall">
                   <Link to={"/siemu/productlist/" + res.categoryId}>
                     <Card>
-                      <img src={res.Picture} className="" alt="No Images" />
+                      <img src={res.Picture} className="" style={{height:"170px" ,width:"240px"}} alt="No Images" />
                       <h2>{res.categoryName}</h2>
                     </Card>
                     {/* <CarouselCard

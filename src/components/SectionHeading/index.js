@@ -32,7 +32,9 @@ export default function SectionHeading({ onToogleSidebar }) {
         alt="rainbow logo"
         className="react-rainbow-admin_header-logo"
       />
-
+<div className="heading">
+  SIEMU
+</div>
       {/* <Input
                 className="rainbow-m-left_xx-large react-rainbow-admin_header-search"
                 placeholder="search"

@@ -3,8 +3,22 @@ import "../../app/styles.css";
 export default class About extends Component {
   render() {
     return (
-      <div className="row">
-        <div className="col-md-12 text-center">
+      <div className="row" style={{padding:"70px"}}>
+         <div className="col-md-6 col-sm-12">
+          <img src={require("../../Asset/bg.jpg")} alt="" />
+        </div>
+          <div className="col-md-6 col-sm-12">
+          <h1 className="h1">Get to know us better.</h1>
+          <div className="line" />
+          <p className="p" style={{ padding: "5px 0px" }}>
+          We are StarStacksImpex providing best quality of products in hardware categories. Right now we're having screws and stainless steel nails.
+          </p>
+          <li>Best Qaulity</li>
+          <li>Best Range</li>
+          <li>More Products</li>
+        </div>
+       
+        {/* <div className="col-md-12 text-center">
           <h1 className="h1">OUR BUSINESS</h1>
           <h2 className="h2">Henna Powder Suppliers & Exporters in India</h2>
           <div className="line" />
@@ -27,32 +41,7 @@ export default class About extends Component {
             known for its teamwork and transparency in the organization.
           </p>
         </div>
-        <div className="col-md-6 col-sm-12">
-          <h1 className="h1">WHY CHOOSE US</h1>
-          <div className="line" />
-          <p className="p" style={{ padding: "5px 10px" }}>
-            We are the Best Organic Henna Powder Suppliers in India which has
-            100% natural henna, mixed only with the finest and freshest henna
-            power. Natural henna is a beautiful, painless form of body art full
-            of rich tradition in various cultures all over the world. Henna
-            (also known as mehndi) is produced from the leaves of the “henna
-            plant”. The leaves contain a red dye called ‘Lawsone’, which
-            essentially leaves the radiant red stain on the skin.
-          </p>
-          <p className="p">
-            Once the leaves are obtained they are crushed into fine powder, the
-            powder is sifted and then mixed with a variety of ingredients such
-            as essential oils. What is the best part of the henna, you ask?
-            Natural henna is 100 % safe and temporary! As your skin exfoliates,
-            the henna stain wears off, allowing you to get something new and
-            different each time you get adorned.We also provide the BAQ Henna,
-            Henna for Eyebrow, Organic Henna Powder, Spice, Herbal Products and
-            many more are there...
-          </p>
-        </div>
-        <div className="col-md-6 col-sm-12">
-          <img src={require("../../Asset/bg.jpg")} alt="" />
-        </div>
+       */}
       </div>
     );
   }
