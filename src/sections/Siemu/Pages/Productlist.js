@@ -169,7 +169,13 @@ class Productlist extends React.Component {
     return (
       <div className="bg-image">
         <div className="">
-          <h2 className="headings">Consumer Product</h2>
+          <h2 className="headings">
+            {" "}
+            {filterProductByCategory.slice(0, 1).map((record, i) => {
+              console.log("record", record);
+              return <>{record.CategoryName}</>;
+            })}
+          </h2>
         </div>
         <div className="container">
           <div

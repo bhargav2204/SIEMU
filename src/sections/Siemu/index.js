@@ -34,13 +34,17 @@ class Product extends Component {
           <h2 className="headings">Welcome to the World of SIEMU</h2>
         </div>
         <div className="container">
-          <div className="row" style={{ padding: "30px 0px" }}>
-            
-              {Category.map((res, i) => {
-                return (
-                  <div className=" rainbow-m-bottom_xsmall" key={i}>
-                    <Link to={"/siemu/productlist/" + res.categoryId}>
-                      <CarouselCard
+          <div className="row">
+            {Category.map((res, i) => {
+              console.log("res", res);
+              return (
+                <div className=" rainbow-m-bottom_xsmall">
+                  <Link to={"/siemu/productlist/" + res.categoryId}>
+                    <Card>
+                      <img src={res.Picture} className="" alt="No Images" />
+                      <h2>{res.categoryName}</h2>
+                    </Card>
+                    {/* <CarouselCard
                         className="rainbow-m_auto"
                         style={carouselContainerStyles}
                       >
@@ -68,12 +72,11 @@ class Product extends Component {
                           alternativeText="Third card accessible description."
                         />
                         </div>
-                      </CarouselCard>
-                    </Link>
-                  </div>
-                );
-              })}
-           
+                      </CarouselCard> */}
+                  </Link>
+                </div>
+              );
+            })}
           </div>
           <div className="row" style={{ padding: "0px  0px 30px 0" }} />
         </div>
