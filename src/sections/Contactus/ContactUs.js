@@ -14,7 +14,7 @@ H – Block, Plot No. – 147 / A Palam Vihar, Gurgaon Haryana India – 122001
 </div>
         </div>
         <div className="col-md-6">
-          <h1>Get In Touch</h1>
+          <h1 className="h1">Get In Touch</h1>
         </div>
 
       </div>
