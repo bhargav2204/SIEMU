@@ -5,7 +5,7 @@ export default class About extends Component {
     return (
       <div className="row" style={{ padding: "70px" }}>
         <div className="col-md-6 col-sm-12">
-          <img src={require("../../Asset/logo.jpeg")} alt="" />
+          <img src={require("../../Asset/ab.jpg")} alt="" />
         </div>
         <div className="col-md-6 col-sm-12">
           <h1 className="h1">Get to know us better.</h1>

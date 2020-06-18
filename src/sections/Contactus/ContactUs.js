@@ -1,6 +1,40 @@
 import React, { Component } from "react";
 import "../../app/styles.css";
+import * as emailjs from "emailjs-com";
+emailjs.init(process.env.REACT_APP_EMAILJS_USER_ID);
 export default class ContactUs extends Component {
+  constructor() {
+    super();
+    this.state = {
+      name: "",
+      email: "",
+      message: "",
+    };
+  }
+
+  nameHandler = (e) => {
+    this.setState({ name: e.target.value });
+  };
+  emailHandler = (e) => {
+    this.setState({ email: e.target.value });
+  };
+  messageHandler = (e) => {
+    this.setState({ message: e.target.value });
+  };
+  subitHandler = () => {
+    const { name, email, message } = this.state;
+    const body = {
+      name: name,
+      email: email,
+      message: message,
+    };
+    emailjs.send(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      body
+    );
+  };
+
   render() {
     return (
       <div className="container">
@@ -57,10 +91,20 @@ export default class ContactUs extends Component {
                 </div>
                 <div className="row">
                   <div className="col-md-6">
-                    <input type="text" placeholder="Name" />
+                    <input
+                      type="text"
+                      placeholder="Name"
+                      value={this.state.name}
+                      onChange={this.nameHandler}
+                    />
                   </div>
                   <div className="col-md-6">
-                    <input type="text" placeholder="Email" />
+                    <input
+                      type="text"
+                      placeholder="Email"
+                      value={this.state.email}
+                      onChange={this.emailHandler}
+                    />
                   </div>
                   <div className="col-md-12">
                     <textarea
@@ -68,10 +112,16 @@ export default class ContactUs extends Component {
                       id=""
                       cols="10"
                       rows="5"
+                      value={this.state.message}
+                      onChange={this.messageHandler}
                       placeholder="Message"
                     />
                   </div>
-                  <div className="button" style={{ cursor: "pointer" }}>
+                  <div
+                    className="button"
+                    style={{ cursor: "pointer" }}
+                    onClick={this.subitHandler}
+                  >
                     Send Message
                   </div>
                 </div>

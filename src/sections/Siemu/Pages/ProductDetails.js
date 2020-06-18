@@ -35,15 +35,18 @@ export default class ProductDetails extends Component {
     super(props);
     this.state = {
       data: [],
+      isLoading: false,
     };
   }
   componentDidMount() {
+    this.setState({ isLoading: true });
     Tabletop.init({
       key: "14jYh5iLTCKas-oJkuwAavQ2w0-PB0xc8duvbAwl4umY",
       callback: (googleData) => {
         // dispatch(receiveProducts(googleData));
         console.log("googleData", googleData);
         this.setState({ data: googleData });
+        this.setState({ isLoading: false });
       },
       simpleSheet: true,
     });
@@ -59,13 +62,8 @@ export default class ProductDetails extends Component {
     console.log("ProductDetails--------", filterProductByCategory);
     return (
       <div className="bg-image ">
-        {Loading === true ? (
-          <Spinner
-            animation="border"
-            variant="primary"
-            className="loader"
-            color="primary"
-          />
+        {this.state.isLoading === true ? (
+          <Spinner className="loader" color="primary" />
         ) : (
           <div className=" " style={{ padding: "22px" }}>
             <div className="card" style={{ padding: "30px" }}>

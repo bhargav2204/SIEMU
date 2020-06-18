@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Card, CarouselImage, CarouselCard } from "react-rainbow-components";
+import { Card } from "react-rainbow-components";
+import { Spinner } from "reactstrap";
 import Tabletop from "tabletop";
 const carouselContainerStyles = {
   maxWidth: 280,
@@ -12,16 +13,20 @@ class Product extends Component {
     super();
     this.state = {
       data: [],
+      isLoading: false,
     };
   }
   componentDidMount() {
+    this.setState({ isLoading: true });
     Tabletop.init({
       key: "1FdE_rtwPMEuv2_rqkQt-sR4Hzv9UqDw3uz8XB9z-oYw",
       callback: (googleData) => {
         // dispatch(receiveProducts(googleData));
         console.log("googleData", googleData);
         this.setState({ data: googleData });
+        this.setState({ isLoading: false });
       },
+
       simpleSheet: true,
     });
   }
@@ -33,25 +38,29 @@ class Product extends Component {
         <div className="">
           <h2 className="headings">Welcome to the World of SIEMU</h2>
         </div>
-        <div className="container">
-          <div className="row">
-            {Category.map((res, i) => {
-              console.log("res", res);
-              return (
-                <div className=" rainbow-m-bottom_xsmall">
-                  <Link to={"/siemu/productlist/" + res.categoryId}>
-                    <Card>
-                      <img
-                        src={res.Picture}
-                        className=""
-                        style={{ height: "170px", width: "240px" }}
-                        alt="No Images"
-                      />
-                      <h2 style={{ textAlign: "center" }}>
-                        {res.categoryName}
-                      </h2>
-                    </Card>
-                    {/* <CarouselCard
+
+        {this.state.isLoading === true ? (
+          <Spinner className="loader" color="primary" />
+        ) : (
+          <div className="container">
+            <div className="row">
+              {Category.map((res, i) => {
+                console.log("res", res);
+                return (
+                  <div className=" rainbow-m-bottom_xsmall">
+                    <Link to={"/siemu/productlist/" + res.categoryId}>
+                      <Card>
+                        <img
+                          src={res.Picture}
+                          className=""
+                          style={{ height: "170px", width: "240px" }}
+                          alt="No Images"
+                        />
+                        <h2 style={{ textAlign: "center" }}>
+                          {res.categoryName}
+                        </h2>
+                      </Card>
+                      {/* <CarouselCard
                         className="rainbow-m_auto"
                         style={carouselContainerStyles}
                       >
@@ -80,13 +89,14 @@ class Product extends Component {
                         />
                         </div>
                       </CarouselCard> */}
-                  </Link>
-                </div>
-              );
-            })}
+                    </Link>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="row" style={{ padding: "0px  0px 30px 0" }} />
           </div>
-          <div className="row" style={{ padding: "0px  0px 30px 0" }} />
-        </div>
+        )}
       </div>
     );
   }

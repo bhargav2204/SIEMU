@@ -16,6 +16,7 @@
     "@fortawesome/react-fontawesome": "^0.1.2",
     "aws-sdk": "^2.686.0",
     "date-fns": "^2.14.0",
+    "emailjs-com": "^2.4.1",
     "history": "^4.7.2",
     "react": "^16.7.0",
     "react-date-range": "^1.0.3",
