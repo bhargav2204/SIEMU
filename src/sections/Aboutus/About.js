@@ -3,21 +3,22 @@ import "../../app/styles.css";
 export default class About extends Component {
   render() {
     return (
-      <div className="row" style={{padding:"70px"}}>
-         <div className="col-md-6 col-sm-12">
-          <img src={require("../../Asset/bg.jpg")} alt="" />
+      <div className="row" style={{ padding: "70px" }}>
+        <div className="col-md-6 col-sm-12">
+          <img src={require("../../Asset/logo.jpeg")} alt="" />
         </div>
-          <div className="col-md-6 col-sm-12">
+        <div className="col-md-6 col-sm-12">
           <h1 className="h1">Get to know us better.</h1>
           <div className="line" />
           <p className="p" style={{ padding: "5px 0px" }}>
-          We are StarStacksImpex providing best quality of products in hardware categories. Right now we're having screws and stainless steel nails.
+            We are Siemu India providing best quality of products in all
+            categories. Right now we're having all goods products.
           </p>
           <li>Best Qaulity</li>
           <li>Best Range</li>
           <li>More Products</li>
         </div>
-       
+
         {/* <div className="col-md-12 text-center">
           <h1 className="h1">OUR BUSINESS</h1>
           <h2 className="h2">Henna Powder Suppliers & Exporters in India</h2>
