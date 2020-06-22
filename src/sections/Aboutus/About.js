@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import "../../app/styles.css";
+import "./style.css";
+import "./animate.css";
 export default class About extends Component {
   render() {
     return (
@@ -18,7 +19,64 @@ export default class About extends Component {
           <li>Best Range</li>
           <li>More Products</li>
         </div>
-
+        <section className="back2">
+          <div className="container">
+            <div className="smart-flex">
+              <div className="smart-img">
+                <img src={require("../../Asset/vessel_2.png")} />
+              </div>
+              <div className="smart-text">
+                <div className="fea">
+                  <h1> Features </h1>
+                </div>
+                <div className="main-custom">
+                  <div className="custom-icon" />
+                  <div className="custom-text">
+                    <h1> Smart schedules</h1>
+                    <p>
+                      {" "}
+                      Continuosly monitoring shipping and fight schedules with{" "}
+                      <br /> intellingent delay delection
+                    </p>
+                  </div>
+                </div>
+                <div className="main-custom">
+                  <div className="custom-icon" />
+                  <div className="custom-text">
+                    <h1> Custom intergrations </h1>
+                    <p>
+                      {" "}
+                      Support your platform through REST API intergrations on a{" "}
+                      <br />
+                      map
+                    </p>
+                  </div>
+                </div>
+                <div className="main-custom">
+                  <div className="custom-icon" />
+                  <div className="custom-text">
+                    <h1> Querying Overview </h1>
+                    <p>
+                      save and querying shipment and get a overview of your{" "}
+                      <br /> goods,ships and flights
+                    </p>
+                  </div>
+                </div>
+                <div className="main-custom">
+                  <div className="custom-icon" />
+                  <div className="custom-text">
+                    <h1> Location on a map</h1>
+                    <p>
+                      {" "}
+                      view shipments,their movements as well as thier locations{" "}
+                      <br /> on a map{" "}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         {/* <div className="col-md-12 text-center">
           <h1 className="h1">OUR BUSINESS</h1>
           <h2 className="h2">Henna Powder Suppliers & Exporters in India</h2>
