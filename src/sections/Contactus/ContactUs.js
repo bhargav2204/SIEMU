@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "../../app/styles.css";
+import { Modal } from "react-rainbow-components";
 import * as emailjs from "emailjs-com";
+
 emailjs.init(process.env.REACT_APP_EMAILJS_USER_ID);
 export default class ContactUs extends Component {
   constructor() {
@@ -10,8 +12,12 @@ export default class ContactUs extends Component {
       email: "",
       message: "",
     };
-  }
 
+    this.handleOnClose = this.handleOnClose.bind(this);
+  }
+  handleOnClose() {
+    return this.setState({ isOpen: false });
+  }
   nameHandler = (e) => {
     this.setState({ name: e.target.value });
   };
@@ -22,17 +28,26 @@ export default class ContactUs extends Component {
     this.setState({ message: e.target.value });
   };
   subitHandler = () => {
-    const { name, email, message } = this.state;
-    const body = {
-      name: name,
-      email: email,
-      message: message,
-    };
-    emailjs.send(
-      process.env.REACT_APP_EMAILJS_SERVICE_ID,
-      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-      body
+    const emailValid = this.state.email.match(
+      /^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i
     );
+    if (emailValid) {
+      const { name, email, message } = this.state;
+      const body = {
+        name: name,
+        email: email,
+        message: message,
+      };
+      emailjs.send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        body
+      );
+      this.setState({ error: "" });
+      this.setState({ isOpen: true });
+    } else {
+      this.setState({ error: "enter valid email address" });
+    }
   };
 
   render() {
@@ -117,6 +132,7 @@ export default class ContactUs extends Component {
                       placeholder="Message"
                     />
                   </div>
+
                   <div
                     className="button"
                     style={{ cursor: "pointer" }}
@@ -124,6 +140,30 @@ export default class ContactUs extends Component {
                   >
                     Send Message
                   </div>
+                  <Modal
+                    id="modal-1"
+                    isOpen={this.state.isOpen}
+                    onRequestClose={this.handleOnClose}
+                  >
+                    <div>
+                      <div class="form-logo">
+                        <img src={require("../../Asset/full.jpeg")} />
+                      </div>
+                      <div className="hey">
+                        <h1>Siemu India !</h1>
+                        <p>
+                          a page or information to provided that your email has
+                          been despatched. You are wellcome to connect via
+                          whatspp for immediate reply
+                        </p>
+                      </div>
+                    </div>
+                  </Modal>
+                </div>
+                <div>
+                  {this.state.error && (
+                    <p style={{ color: "red" }}>{this.state.error}</p>
+                  )}
                 </div>
               </div>
               <div className="col-md-2" />
