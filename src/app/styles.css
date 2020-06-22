@@ -209,3 +209,28 @@ textarea {
   border-color: #04d39f;
   color: #ffffff;
 }
+.form-logo img {
+  width: 48px;
+  height: 50px;
+}
+.hey h1 {
+  color: #353650;
+  font-size: 22px;
+  margin-bottom: 0;
+  margin-top: -40px;
+  text-align: center;
+}
+.btn11 {
+  padding: 10px 18px;
+  text-align: center;
+  color: #353650;
+  font-size: 16px;
+  text-align: center;
+  display: inline-block;
+}
+.hey p {
+  color: #353650;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 25px;
+}
