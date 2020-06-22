@@ -36,7 +36,7 @@ class Product extends Component {
     return (
       <div className="bg-image">
         <div className="">
-          <h2 className="headings">Welcome to the World of SIEMU</h2>
+          <h2 className="headings">Welcome to the World of <br/> <span style={{fontFamily: "Carter One, cursive"}}>siemu</span></h2>
         </div>
 
         {this.state.isLoading === true ? (
