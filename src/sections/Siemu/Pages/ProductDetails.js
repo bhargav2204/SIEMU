@@ -63,10 +63,11 @@ export default class ProductDetails extends Component {
     return (
       <div className="bg-image ">
         {this.state.isLoading === true ? (
-          <Spinner className="loader" color="primary" />
+         <div className="main"></div>
         ) : (
           <div className=" " style={{ padding: "22px" }}>
             <div className="card" style={{ padding: "30px" }}>
+              <div className="closeButton">*</div>
               {filterProductByCategory.map((record) => {
                 return (
                   <div className="row  ">

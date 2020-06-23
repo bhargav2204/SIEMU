@@ -40,10 +40,16 @@ class Product extends Component {
             Welcome to the World of <br />{" "}
             <span style={{ fontFamily: "Carter One, cursive" }}>siemu</span>
           </h2>
+          {/* <img
+        src="../../assets/images/1.jpeg"
+        alt="rainbow logo"
+        className=""
+      /> */}
         </div>
 
         {this.state.isLoading === true ? (
-          <Spinner className="loader" color="primary" />
+          // <Spinner className="loader" color="primary" />
+          <div className="main" />
         ) : (
           <div className="container">
             <div className="row">
