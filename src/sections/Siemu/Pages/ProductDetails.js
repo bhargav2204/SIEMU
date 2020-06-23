@@ -5,6 +5,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ErrImg from "../../../Asset/logo.jpeg";
 import { Spinner } from "reactstrap";
+import { Link } from "react-router-dom";
 const carouselContainerStyles = {
   maxWidth: 1200,
   height: 560,
@@ -51,6 +52,10 @@ export default class ProductDetails extends Component {
       simpleSheet: true,
     });
   }
+  closeButton() {
+    window.history.back();
+  }
+
   render() {
     const ProductDetails = this.state.data;
     let Loading = this.props.Loading;
@@ -63,11 +68,18 @@ export default class ProductDetails extends Component {
     return (
       <div className="bg-image ">
         {this.state.isLoading === true ? (
-         <div className="main"></div>
+          <div className="main" />
         ) : (
           <div className=" " style={{ padding: "22px" }}>
             <div className="card" style={{ padding: "30px" }}>
-              <div className="closeButton">*</div>
+              <div
+                className="closeButton"
+                style={{ cursor: "pointer" }}
+                onClick={this.closeButton}
+              >
+                x
+              </div>
+
               {filterProductByCategory.map((record) => {
                 return (
                   <div className="row  ">
@@ -153,9 +165,17 @@ export default class ProductDetails extends Component {
                             {record.productName}
                           </b>
                         </h1>
-                        <li style={{ padding: "5px 0" }}>
-                          {record.description}
-                        </li>
+                        <div style={{ padding: "5px 0", fontSize: "23px" }}>
+                          {record.description.split(".").length === undefined
+                            ? null
+                            : record.description.split(".").map((data, i) => {
+                                return (
+                                  <div key={i}>
+                                    <li>{data}</li>
+                                  </div>
+                                );
+                              })}
+                        </div>
                         {/* <li>
                         dead skin cells, oil, dirt, and other types of
                         pollutants from the skin of the face
@@ -164,6 +184,9 @@ export default class ProductDetails extends Component {
                         This helps to unclog pores and prevent skin conditions
                         such as acne.
                       </li> */}
+                      </div>
+                      <div className="lastimg">
+                        <img src={require("../../../Asset/logo.jpeg")} />
                       </div>
                     </div>
                   </div>

@@ -49,7 +49,9 @@ export default class ContactUs extends Component {
       this.setState({ error: "enter valid email address" });
     }
   };
-
+  okayHandler() {
+    window.location.reload();
+  }
   render() {
     return (
       <div className="container">
@@ -79,9 +81,9 @@ export default class ContactUs extends Component {
                   <div className="round">2</div>
                   <div className="" style={{ paddingTop: "11px" }}>
                     <p className="h3">
-                      <b>Location</b>
+                      <b>Whatspp Contact</b>
                     </p>
-                    <h4 className="h4">www.siemultd.com</h4>
+                    <h4 className="h4">+91-9952402584 (Ind)</h4>
                   </div>
                 </div>
               </div>
@@ -151,11 +153,14 @@ export default class ContactUs extends Component {
                       </div>
                       <div className="hey">
                         <h1>Siemu India !</h1>
-                        <p>
+                        <p style={{ fontSize: "25px", fontStyle: "bold" }}>
                           a page or information to provided that your email has
                           been despatched. You are wellcome to connect via
                           whatspp for immediate reply
                         </p>
+                      </div>
+                      <div className="buttons" onClick={this.okayHandler}>
+                        Okay
                       </div>
                     </div>
                   </Modal>
