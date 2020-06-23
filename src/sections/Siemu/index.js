@@ -36,7 +36,10 @@ class Product extends Component {
     return (
       <div className="bg-image">
         <div className="">
-          <h2 className="headings">Welcome to the World of <br/> <span style={{fontFamily: "Carter One, cursive"}}>siemu</span></h2>
+          <h2 className="headings">
+            Welcome to the World of <br />{" "}
+            <span style={{ fontFamily: "Carter One, cursive" }}>siemu</span>
+          </h2>
         </div>
 
         {this.state.isLoading === true ? (
@@ -94,7 +97,7 @@ class Product extends Component {
                 );
               })}
             </div>
-            <div className="row" style={{ padding: "0px  0px 30px 0" }} />
+            <div className="row" style={{ padding: "0px  0px 0px 0" }} />
           </div>
         )}
       </div>
