@@ -112,7 +112,7 @@ class Productlist extends React.Component {
           </h2>
         </div>
         {this.state.isLoading === true ? (
-          <Spinner className="loader" color="primary" />
+         <div className="main"></div>
         ) : (
           <div className="container">
             <div

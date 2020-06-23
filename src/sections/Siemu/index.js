@@ -37,10 +37,16 @@ class Product extends Component {
       <div className="bg-image">
         <div className="">
           <h2 className="headings">Welcome to the World of <br/> <span style={{fontFamily: "Carter One, cursive"}}>siemu</span></h2>
+          {/* <img
+        src="../../assets/images/1.jpeg"
+        alt="rainbow logo"
+        className=""
+      /> */}
         </div>
 
         {this.state.isLoading === true ? (
-          <Spinner className="loader" color="primary" />
+          // <Spinner className="loader" color="primary" />
+        <div className="main"></div>
         ) : (
           <div className="container">
             <div className="row">
@@ -94,7 +100,7 @@ class Product extends Component {
                 );
               })}
             </div>
-            <div className="row" style={{ padding: "0px  0px 30px 0" }} />
+            <div className="row" style={{ padding: "0px  0px 0px 0" }} />
           </div>
         )}
       </div>
