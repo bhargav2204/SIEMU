@@ -122,6 +122,9 @@ export default class ContactUs extends Component {
                       value={this.state.email}
                       onChange={this.emailHandler}
                     />
+                    {this.state.error && (
+                      <p style={{ color: "red" }}>{this.state.error}</p>
+                    )}
                   </div>
                   <div className="col-md-12">
                     <textarea
@@ -165,11 +168,7 @@ export default class ContactUs extends Component {
                     </div>
                   </Modal>
                 </div>
-                <div>
-                  {this.state.error && (
-                    <p style={{ color: "red" }}>{this.state.error}</p>
-                  )}
-                </div>
+                <div />
               </div>
               <div className="col-md-2" />
             </div>

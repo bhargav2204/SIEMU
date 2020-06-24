@@ -165,13 +165,19 @@ export default class ProductDetails extends Component {
                             {record.productName}
                           </b>
                         </h1>
-                        <div style={{ padding: "5px 0", fontSize: "23px" }}>
+                        <div style={{ padding: "5px 0", fontSize: "17px" }}>
                           {record.description.split(".").length === undefined
                             ? null
                             : record.description.split(".").map((data, i) => {
                                 return (
-                                  <div key={i}>
-                                    <li>{data}</li>
+                                  <div
+                                    style={{
+                                      display: "list-item",
+                                      listStyle: "Circletype",
+                                    }}
+                                    key={i}
+                                  >
+                                    <div>{data}</div>
                                   </div>
                                 );
                               })}
@@ -186,7 +192,7 @@ export default class ProductDetails extends Component {
                       </li> */}
                       </div>
                       <div className="lastimg">
-                        <img src={require("../../../Asset/logo.jpeg")} />
+                        <img src={record.Certficate} />
                       </div>
                     </div>
                   </div>

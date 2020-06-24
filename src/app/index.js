@@ -138,13 +138,13 @@ class App extends Component {
               label="Contact Us"
               onClick={() => navigate("/contactus")}
             />
-            <SidebarItem
+            {/* <SidebarItem
               className="react-rainbow-admin-app_sidebar-item"
               icon={<Google />}
               name="Whatsapp"
               label="Whatsapp"
               onClick={() => navigate("/abc")}
-            />
+            /> */}
             {/* <SidebarItem
               className="react-rainbow-admin-app_sidebar-item"
               icon={<ApplicationIcon />}
