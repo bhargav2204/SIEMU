@@ -71,8 +71,24 @@ export default class ContactUs extends Component {
                     <p className="h3">
                       <b>Contact Us</b>
                     </p>
-                    <h4 className="h4">+91-9952402584 (Ind)</h4>
-                    <h4 className="h4">+966-5500233003 (Intl)</h4>
+                    <h4 className="h4">
+                      +91-9952402584 (Ind)&nbsp;
+                      <img
+                        src={require("../../Asset/wp.png")}
+                        style={{
+                          width: "20px",
+                          height: "20px",
+                          marginTop: "-6px",
+                        }}
+                      />
+                    </h4>
+                    <h4 className="h4">
+                      +966-5500233003 (Intl)&nbsp;
+                      <img
+                        src={require("../../Asset/wp.png")}
+                        style={{ width: "20px", height: "20px" }}
+                      />
+                    </h4>
                   </div>
                 </div>
               </div>
@@ -156,10 +172,17 @@ export default class ContactUs extends Component {
                       </div>
                       <div className="hey">
                         <h1>Siemu India !</h1>
-                        <p style={{ fontSize: "25px", fontStyle: "bold" }}>
+                        <p style={{ fontSize: "30px", fontStyle: "bold" }}>
                           a page or information to provided that your email has
                           been despatched. You are wellcome to connect via
-                          whatspp for immediate reply
+                          whatspp for immediate reply &nbsp;
+                          <img
+                            src={require("../../Asset/wp.png")}
+                            style={{
+                              width: "25px",
+                              height: "25px",
+                            }}
+                          />
                         </p>
                       </div>
                       <div className="buttons" onClick={this.okayHandler}>

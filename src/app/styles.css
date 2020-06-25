@@ -28,8 +28,11 @@
 
 .react-rainbow-admin-app_sidebar-item {
   margin-bottom: 16px;
+  transition-duration: 0.8s;
 }
-
+.react-rainbow-admin-app_sidebar-item:hover {
+  transform: translate(0px, -5px);
+}
 .react-rainbow-admin-app_sidebar-back-button-container {
   display: none;
 }
@@ -208,7 +211,14 @@ textarea {
   background: rgb(9, 128, 181);
   border-color: rgb(9, 128, 181);
   color: #ffffff;
+  transition-duration: 0.8s;
 }
+.button:hover {
+  background: #0e6f15;
+  border-radius: 5px 0px 5px 0px;
+  box-shadow: 5px 5px 2px 2px;
+}
+
 .buttons {
   padding: 12px;
   cursor: pointer;
@@ -219,6 +229,12 @@ textarea {
   background: rgb(9, 128, 181);
   border-color: rgb(9, 128, 181);
   color: #ffffff;
+  transition-duration: 0.8s;
+}
+.buttons:hover {
+  background: #0e6f15;
+  border-radius: 5px 0px 5px 0px;
+  box-shadow: 5px 5px 2px 2px;
 }
 .form-logo img {
   width: 48px;
@@ -297,8 +313,8 @@ textarea {
 
 .closeButton {
   position: absolute;
-  right: 16px;
-  top: 14px;
+  right: 5px;
+  top: 0px;
   height: 30px;
   width: 30px;
 
@@ -311,6 +327,6 @@ textarea {
 
 .lastimg {
   position: absolute;
-  bottom: 0;
-  right: 33px;
+  bottom: -30px;
+  right: 0;
 }

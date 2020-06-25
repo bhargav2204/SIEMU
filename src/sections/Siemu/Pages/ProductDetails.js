@@ -77,7 +77,10 @@ export default class ProductDetails extends Component {
                 style={{ cursor: "pointer" }}
                 onClick={this.closeButton}
               >
-                x
+                <img
+                  src={require("../../../Asset/closebutton.jpg")}
+                  style={{ width: "30px", height: "30px" }}
+                />
               </div>
 
               {filterProductByCategory.map((record) => {
@@ -159,9 +162,14 @@ export default class ProductDetails extends Component {
                       </Carousel>
                     </div>
                     <div className="col-md-6 ">
-                      <div className="">
+                      <div className="" style={{ paddingLeft: "36px" }}>
                         <h1 style={{ fontSize: "25px" }}>
-                          <b style={{ borderBottom: "1px solid #000" }}>
+                          <b
+                            style={{
+                              borderBottom: "1px solid #000",
+                              color: "rgb(9, 128, 181)",
+                            }}
+                          >
                             {record.productName}
                           </b>
                         </h1>
