@@ -112,7 +112,7 @@ class Productlist extends React.Component {
           </h2>
         </div>
         {this.state.isLoading === true ? (
-         <div className="main"></div>
+          <div className="main" style={{ marginTop: "60px" }} />
         ) : (
           <div className="container">
             <div

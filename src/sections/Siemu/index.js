@@ -38,7 +38,12 @@ class Product extends Component {
         <div className="">
           <h2 className="headings">
             Welcome to the World of <br />{" "}
-            <span style={{ fontFamily: "Carter One, cursive" }}>siemu</span>
+            <span>
+              <img
+                src={require("../../Asset/siemu.png")}
+                style={{ width: "120px", height: "40px" }}
+              />
+            </span>
           </h2>
           {/* <img
         src="../../assets/images/1.jpeg"

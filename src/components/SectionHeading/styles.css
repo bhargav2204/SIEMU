@@ -9,7 +9,7 @@
 
 .react-rainbow-admin_header-logo {
   width: 130px;
-  height: 60px;
+  height: 45px;
 }
 
 .react-rainbow-admin_header-search {
@@ -84,4 +84,7 @@
   .react-rainbow-admin_header-github-icon {
     margin-right: 16px;
   }
+}
+.dQHFbD {
+  background-color: #108548 !important;
 }

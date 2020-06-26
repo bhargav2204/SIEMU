@@ -55,7 +55,7 @@ export default class ContactUs extends Component {
   render() {
     return (
       <div className="container">
-        <div className="row" style={{ padding: "70px 15px" }}>
+        <div className="row" style={{ padding: "45px 15px" }}>
           <div className="col-md-12">
             <h1 className="h1" style={{ textAlign: "center" }}>
               Get In Touch With Us
@@ -67,27 +67,38 @@ export default class ContactUs extends Component {
               <div className="col-md-4 col-sm-12 col-xs-12">
                 <div className="">
                   <div className="round">1</div>
-                  <div className="" style={{ paddingTop: "11px" }}>
+                  <div className="" style={{ paddingTop: "5px" }}>
                     <p className="h3">
                       <b>Contact Us</b>
                     </p>
                     <h4 className="h4">
                       +91-9952402584 (Ind)&nbsp;
-                      <img
-                        src={require("../../Asset/wp.png")}
-                        style={{
-                          width: "20px",
-                          height: "20px",
-                          marginTop: "-6px",
-                        }}
-                      />
+                      <a
+                        href="https://api.whatsapp.com/send?phone=00966550023003"
+                        target="_blank"
+                      >
+                        {" "}
+                        <img
+                          src={require("../../Asset/wp.png")}
+                          style={{
+                            width: "20px",
+                            height: "20px",
+                            marginTop: "-6px",
+                          }}
+                        />
+                      </a>
                     </h4>
                     <h4 className="h4">
                       +966-5500233003 (Intl)&nbsp;
-                      <img
-                        src={require("../../Asset/wp.png")}
-                        style={{ width: "20px", height: "20px" }}
-                      />
+                      <a
+                        href="https://api.whatsapp.com/send?phone=00966550023003"
+                        target="_blank"
+                      >
+                        <img
+                          src={require("../../Asset/wp.png")}
+                          style={{ width: "20px", height: "20px" }}
+                        />
+                      </a>
                     </h4>
                   </div>
                 </div>
@@ -95,18 +106,18 @@ export default class ContactUs extends Component {
               <div className="col-md-4 col-sm-12 col-xs-12">
                 <div className="">
                   <div className="round">2</div>
-                  <div className="" style={{ paddingTop: "11px" }}>
+                  <div className="" style={{ paddingTop: "5px" }}>
                     <p className="h3">
-                      <b>Whatspp Contact</b>
+                      <b>Location</b>
                     </p>
-                    <h4 className="h4">+91-9952402584 (Ind)</h4>
+                    <h4 className="h4">abc</h4>
                   </div>
                 </div>
               </div>
               <div className="col-md-4 col-sm-12 col-xs-12">
                 <div className="">
                   <div className="round">3</div>
-                  <div className="" style={{ paddingTop: "11px" }}>
+                  <div className="" style={{ paddingTop: "5px" }}>
                     <p className="h3">
                       <b>Email Contact</b>
                     </p>
@@ -176,13 +187,18 @@ export default class ContactUs extends Component {
                           a page or information to provided that your email has
                           been despatched. You are wellcome to connect via
                           whatspp for immediate reply &nbsp;
-                          <img
-                            src={require("../../Asset/wp.png")}
-                            style={{
-                              width: "25px",
-                              height: "25px",
-                            }}
-                          />
+                          <a
+                            href="https://api.whatsapp.com/send?phone=00966550023003"
+                            target="_blank"
+                          >
+                            <img
+                              src={require("../../Asset/wp.png")}
+                              style={{
+                                width: "25px",
+                                height: "25px",
+                              }}
+                            />
+                          </a>
                         </p>
                       </div>
                       <div className="buttons" onClick={this.okayHandler}>

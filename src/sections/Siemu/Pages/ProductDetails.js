@@ -67,6 +67,9 @@ export default class ProductDetails extends Component {
     console.log("ProductDetails--------", filterProductByCategory);
     return (
       <div className="bg-image ">
+        <div className="">
+          <h2 className="headings" />
+        </div>
         {this.state.isLoading === true ? (
           <div className="main" />
         ) : (

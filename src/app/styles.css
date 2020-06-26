@@ -9,6 +9,7 @@
   z-index: 99999;
   padding-bottom: 14px;
   padding-top: 14px;
+  margin-top: 50px;
 }
 
 .react-rainbow-admin-app_sidebar {
@@ -117,11 +118,13 @@ button:focus {
 }
 
 .bg-image {
-  background-image: url("../Asset/Images/b2.jpeg");
+  /* background-image: url("../Asset/Images/b2.jpeg"); */
+  background-color: #353535;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 89vh;
+  min-height: 92vh;
+  margin-top: -20px;
 }
 
 .tp-image {
@@ -214,7 +217,7 @@ textarea {
   transition-duration: 0.8s;
 }
 .button:hover {
-  background: #0e6f15;
+  background: #108548;
   border-radius: 5px 0px 5px 0px;
   box-shadow: 5px 5px 2px 2px;
 }
@@ -232,7 +235,7 @@ textarea {
   transition-duration: 0.8s;
 }
 .buttons:hover {
-  background: #0e6f15;
+  background: #108548;
   border-radius: 5px 0px 5px 0px;
   box-shadow: 5px 5px 2px 2px;
 }
@@ -243,10 +246,11 @@ textarea {
 
 .hey h1 {
   color: #353650;
-  font-size: 22px;
+  font-size: 45px;
   margin-bottom: 0;
   margin-top: -40px;
   text-align: center;
+  font-style: initial;
 }
 
 .btn11 {
@@ -260,29 +264,31 @@ textarea {
 
 .hey p {
   color: #353650;
-  font-size: 20px;
+  font-size: 20px !important;
   text-align: center;
   margin-top: 25px;
 }
 
 .main {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  border-radius: 35%;
   position: relative;
+  margin-top: 40px;
   left: 45%;
   top: 100%;
   border: solid 0px gray;
 }
 
 .main:after {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  border-radius: 35%;
   position: absolute;
+  margin-top: 40px;
   left: 50%;
   top: 100%;
-  background: url("../Asset/full.jpeg");
+  background: url("../Asset/loaders.png");
   background-size: contain;
   content: "";
   -webkit-animation: spinX 3s infinite;
