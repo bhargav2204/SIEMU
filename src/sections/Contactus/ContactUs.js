@@ -80,11 +80,7 @@ export default class ContactUs extends Component {
                         {" "}
                         <img
                           src={require("../../Asset/wp.png")}
-                          style={{
-                            width: "20px",
-                            height: "20px",
-                            marginTop: "-6px",
-                          }}
+                          className="whatsapp"
                         />
                       </a>
                     </h4>
@@ -96,7 +92,7 @@ export default class ContactUs extends Component {
                       >
                         <img
                           src={require("../../Asset/wp.png")}
-                          style={{ width: "20px", height: "20px" }}
+                          className="whatsappone"
                         />
                       </a>
                     </h4>
@@ -110,7 +106,10 @@ export default class ContactUs extends Component {
                     <p className="h3">
                       <b>Location</b>
                     </p>
-                    <h4 className="h4">abc</h4>
+                    <h4 className="h4">
+                      Plot# 121, CSV electronic City Bangalore 100 Karnataka,
+                      India
+                    </h4>
                   </div>
                 </div>
               </div>
@@ -193,10 +192,7 @@ export default class ContactUs extends Component {
                           >
                             <img
                               src={require("../../Asset/wp.png")}
-                              style={{
-                                width: "25px",
-                                height: "25px",
-                              }}
+                              className="whatsapptwo"
                             />
                           </a>
                         </p>

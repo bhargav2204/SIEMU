@@ -6,6 +6,7 @@ import ButtonIcon from "react-rainbow-components/components/ButtonIcon";
 import { BarsIcon } from "../icons";
 
 import "./styles.css";
+import { Link } from "react-router-dom";
 
 export default function SectionHeading({ onToogleSidebar }) {
   return (
@@ -18,6 +19,7 @@ export default function SectionHeading({ onToogleSidebar }) {
         alt="rainbow logo"
         className="react-rainbow-admin_header-logo"
       />
+
       <div className="heading">{/* SIEMU */}</div>
 
       <section className="rainbow-flex rainbow-align_center react-rainbow-admin_header-actions" />

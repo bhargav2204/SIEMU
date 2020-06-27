@@ -336,3 +336,28 @@ textarea {
   bottom: -30px;
   right: 0;
 }
+.whatsapp {
+  width: 20px;
+  height: 20px;
+  margin-top: -6px;
+  transition-duration: 0.8s;
+}
+.whatsapp:hover {
+  transform: translate(0, -3px);
+}
+.whatsappone {
+  width: 20px;
+  height: 20px;
+  transition-duration: 0.8s;
+}
+.whatsappone:hover {
+  transform: translate(0, -3px);
+}
+.whatsapptwo {
+  width: 25px;
+  height: 25px;
+  transition-duration: 0.8s;
+}
+.whatsapptwo:hover {
+  transform: translate(0, -3px);
+}
