@@ -52,7 +52,7 @@
 @media (max-width: 600px) {
   .react-rainbow-admin_header {
     height: 124px;
-    padding: 16px 16px 0 16px;
+    padding: 0px 16px 0 16px;
     align-items: flex-start;
   }
   .react-rainbow-admin_header-search {

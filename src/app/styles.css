@@ -361,3 +361,13 @@ textarea {
 .whatsapptwo:hover {
   transform: translate(0, -3px);
 }
+@media (max-width: 600px) {
+  .react-rainbow-admin-app_router-container {
+    padding-top: 70px;
+
+    padding-left: 0;
+  }
+  .react-rainbow-admin_header {
+    padding: 0px 16px 0 16px;
+  }
+}

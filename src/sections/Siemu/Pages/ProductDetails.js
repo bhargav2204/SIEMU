@@ -112,7 +112,12 @@ export default class ProductDetails extends Component {
                               record.pictures.length ? record.pictures : ErrImg
                             }
                             alt=""
-                            style={{ height: "450px", width: "570px" }}
+                            style={{
+                              height: "450px",
+                              width: "570px",
+                              border: "1px solid rgb(9, 128, 181)",
+                              borderRadius: "17px",
+                            }}
                           />
                         </div>
                         <div>
@@ -123,7 +128,12 @@ export default class ProductDetails extends Component {
                                 : ErrImg
                             }
                             alt=""
-                            style={{ height: "450px", width: "570px" }}
+                            style={{
+                              height: "450px",
+                              width: "570px",
+                              border: "1px solid rgb(9, 128, 181)",
+                              borderRadius: "17px",
+                            }}
                           />
                         </div>
                         <div>
@@ -134,7 +144,12 @@ export default class ProductDetails extends Component {
                                 : ErrImg
                             }
                             alt=""
-                            style={{ height: "450px", width: "570px" }}
+                            style={{
+                              height: "450px",
+                              width: "570px",
+                              border: "1px solid rgb(9, 128, 181)",
+                              borderRadius: "17px",
+                            }}
                           />
                         </div>
                         <div>
@@ -145,7 +160,12 @@ export default class ProductDetails extends Component {
                                 : ErrImg
                             }
                             alt=""
-                            style={{ height: "450px", width: "570px" }}
+                            style={{
+                              height: "450px",
+                              width: "570px",
+                              border: "1px solid rgb(9, 128, 181)",
+                              borderRadius: "17px",
+                            }}
                           />
                         </div>
                         {/* <div>
