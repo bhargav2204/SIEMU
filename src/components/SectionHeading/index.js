@@ -18,14 +18,14 @@ export default function SectionHeading({ onToogleSidebar }) {
       className="react-rainbow-admin_header rainbow-position_fixed rainbow-flex rainbow-align_center rainbow-p-horizontal_large rainbow-background-color_white"
       style={{ background: "rgb(2, 65, 142)", height: "50px" }}
     >
-    <Link to="/siemu">
+   
       <img
       onClick={handleRedirectToHomePage}
         src={require("../../Asset/headerlogo.jpeg")}
         alt="rainbow logo"
         className="react-rainbow-admin_header-logo"
       />
-</Link>
+
       <div className="heading">{/* SIEMU */}</div>
 
       <section className="rainbow-flex rainbow-align_center react-rainbow-admin_header-actions" />
