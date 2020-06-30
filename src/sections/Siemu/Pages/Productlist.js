@@ -70,12 +70,21 @@ class Productlist extends React.Component {
               paddingBottom: "5px",
             }}
           >
-            <h2>{recoed.productName}</h2>&nbsp;
-            <h1> {recoed.titalOne}</h1>
+            <h2 style={{ color: "rgb(2, 65, 142)" }}>{recoed.productName}</h2>
+          </div>
+          <div style={{ display: "list-item" }}>
+            <h1 style={{ display: "list-item", marginLeft: "8px" }}>
+              {" "}
+              {recoed.titalOne}
+            </h1>
             &nbsp;
-            <h1>{recoed.titalTwo}</h1>
+            <h1 style={{ display: "list-item", marginLeft: "8px" }}>
+              {recoed.titalTwo}
+            </h1>
             &nbsp;
-            <h1>{recoed.titalThree}</h1>
+            <h1 style={{ display: "list-item", marginLeft: "8px" }}>
+              {recoed.titalThree}
+            </h1>
             &nbsp;
           </div>
         </Card>
