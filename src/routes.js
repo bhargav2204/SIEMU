@@ -12,15 +12,15 @@ export default function Routes() {
   return (
     <Router history={history}>
       <Switch>
-        <Redirect from="/" exact to="/siemu" />
+        {/* <Redirect from="/" exact to="/siemu" /> */}
         {/* <Route path="/signin" component={SignIn} /> */}
-        <Route path="/siemu/productDetails/:id" component={ProductDetails} />
+        {/* <Route path="/siemu/productDetails/:id" component={ProductDetails} />
         <Route path="/siemu/productlist/:id" component={Productlist} />
 
         <Route path="/siemu" component={Siemu} />
         <Route path="/aboutus" component={AboutUs} />
         <Route path="/contactus" component={ContactUs} />
-        <Route path="/demo" component={Demo} />
+        <Route path="/demo" component={Demo} /> */}
       </Switch>
     </Router>
   );
