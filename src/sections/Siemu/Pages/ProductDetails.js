@@ -42,7 +42,7 @@ export default class ProductDetails extends Component {
   componentDidMount() {
     this.setState({ isLoading: true });
     Tabletop.init({
-      key: "14jYh5iLTCKas-oJkuwAavQ2w0-PB0xc8duvbAwl4umY",
+      // key: "14jYh5iLTCKas-oJkuwAavQ2w0-PB0xc8duvbAwl4umY",
       callback: (googleData) => {
         // dispatch(receiveProducts(googleData));
         console.log("googleData", googleData);
