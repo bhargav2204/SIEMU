@@ -19,7 +19,7 @@ class Product extends Component {
   componentDidMount() {
     this.setState({ isLoading: true });
     Tabletop.init({
-      // key: "1FdE_rtwPMEuv2_rqkQt-sR4Hzv9UqDw3uz8XB9z-oYw",
+      key: "1FdE_rtwPMEuv2_rqkQt-sR4Hzv9UqDw3uz8XB9z-oYw",
       callback: (googleData) => {
         // dispatch(receiveProducts(googleData));
         console.log("googleData", googleData);
